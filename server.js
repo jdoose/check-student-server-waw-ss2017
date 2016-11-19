@@ -16,16 +16,17 @@ server.use(restify.queryParser());
 server.get('/api/players', (req, res) => {
 	var query = req.params.favorites || 'false';
 
-	if(query === 'true'){
+		console.log(req.params);
+		if (query === 'true') {
 		res.json(200, playersFav);
-	} else if(query === 'false'){
+	} else if (query === 'false') {
 		res.json(200, playersAll);
 	} else {
 		res.json(404, { message: 'FAIL' });
 	}
 });
 server.post('/api/players', (req, res) => {
-	if(req.body) {
+	if (req.body) {
 		return res.json(200, { message: 'success' });
 	}
 
