@@ -33,6 +33,6 @@ server.post('/api/players', (req, res) => {
 	res.json(404, { message: 'Empty body is not allowed.' });
 });
 
-server.listen(13337, () => {
+server.listen(1337, () => {
  console.log(`${server.name} is listening at ${server.url}`);
 });

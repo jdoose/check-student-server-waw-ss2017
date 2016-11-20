@@ -23,9 +23,7 @@
   },
   "homepage": "https://github.com/CodeKittey/www#readme",
   "dependencies": {
-    "bower": "^1.7.9",
     "restify": "^4.0.4",
     "restify-cors-middleware": "0.0.6",
-    "swagger-restify": "github:vellotis/swagger-restify"
   }
 }
