@@ -1,0 +1,72 @@
+[{
+    "_id" : 0,
+    "avatarUrl" : "/images/student/superhero-batman-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-batman-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-batman-big-active.png"
+},
+{
+    "_id" : 1,
+    "avatarUrl" : "/images/student/superhero-catwoman-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-catwoman-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-catwoman-big-active.png"
+},
+{
+    "_id" : 2,
+    "avatarUrl" : "/images/student/superhero-gandalf-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-gandalf-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-gandalf-big-active.png"
+},
+{
+    "_id" : 3,
+    "avatarUrl" : "/images/student/superhero-greenlantern-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-greenlantern-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-greenlantern-big-active.png"
+},
+{
+    "_id" : 4,
+    "avatarUrl" : "/images/student/superhero-hulk-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-hulk-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-hulk-big-active.png"
+},
+{
+    "_id" : 5,
+    "avatarUrl" : "/images/student/superhero-kickass-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-kickass-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-kickass-big-active.png"
+},
+{
+    "_id" : 6,
+    "avatarUrl" : "/images/student/superhero-luke-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-luke-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-luke-big-active.png"
+},
+{
+    "_id" : 7,
+    "avatarUrl" : "/images/student/superhero-robin-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-robin-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-robin-big-active.png"
+},
+{
+    "_id" : 8,
+    "avatarUrl" : "/images/student/superhero-skeletor-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-skeletor-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-skeletor-big-active.png"
+},
+{
+    "_id" : 9,
+    "avatarUrl" : "/images/student/superhero-spiderman-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-spiderman-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-spiderman-big-active.png"
+},
+{
+    "_id" : 10,
+    "avatarUrl" : "/images/student/superhero-superman-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-superman-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-superman-big-active.png"
+},
+{
+    "_id" : 11,
+    "avatarUrl" : "/images/student/superhero-superwoman-active.png",
+    "avatarInactiveUrl": "/images/student/superhero-superwoman-inactive.png",
+    "avatarBigUrl":  "/images/student/superhero-superwoman-big-active.png"
+}]

@@ -1,0 +1,115 @@
+[{
+  "_id": 1,
+  "forename": "Uta",
+  "surname": "Teeth",
+  "studyGroups": {
+      "class": "2a",
+      "imageUrl": "/images/studyGroup/studyGroup_2a_active.png",
+      "imageUrlInactive": "/images/studyGroup/studyGroup_2a_active-big.png",
+      "imageUrlBig": "/images/studyGroup/studyGroup_2a_inactive.png"
+  },
+  "formteacher": "Markus Karg",
+  "school" : {
+      "name": "Dalberg Grundschule",
+      "address": "Trajanstr. 11, 68526 Ladenburg",
+      "country": "Deutschland",
+      "email": "contact@db-grundschule.de",
+      "telefon": "06203/111111",
+      "imageUrl": "/images/school/school-violet-active.png",
+      "imageUrlInactive": "/images/school/school-inactive.png",
+      "imageUrlBig": "/images/school/school-violet-big-active.png"
+  },
+  "avatarId": "1"
+  },
+  {
+    "_id": 2,
+    "forename": "Theo",
+    "surname": "Kraus",
+    "studyGroups": {
+        "class": "3",
+        "imageUrl": "/images/studyGroup/studyGroup_3_active.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_3_active-big.png",
+        "imageUrlBig": "/images/studyGroup/studyGroup_3_inactive.png"
+    },
+    "formteacher": "Christian Kraus",
+    "school" : {
+        "name": "Astrid-Lindgren-Schule",
+        "address": "Maxdorfstr. 3, 69123 HD-Kirchheim",
+        "country": "Deutschland",
+        "email": "contact@al-schule.de",
+        "telefon": "06204/144144",
+        "imageUrl": "/images/school/school-red-active.png",
+        "imageUrlInactive": "/images/school/school-inactive.png",
+        "imageUrlBig": "/images/school/school-red-big-active.png"
+    },
+    "avatarId": "2"
+  },
+  {
+    "_id": 3,
+    "forename": "Jan",
+    "surname": "Arzt",
+    "studyGroups": {
+        "class": "5b",
+        "imageUrl": "/images/studyGroup/studyGroup_5b_active.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_5b_active-big.png",
+        "imageUrlBig": "/images/studyGroup/studyGroup_5b_inactive.png"
+    },
+    "formteacher": "Dirk Felsenheimer",
+    "school" : {
+        "name": "Rock'n'Roll Realschule",
+        "address": "Unpluggedstr. 3, 45879 Gelsenkirchen",
+        "country": "Deutschland",
+        "email": "contact@bestebandderwelt.de",
+        "telefon": "0209/2710193",
+        "imageUrl": "/images/school/school-green-active.png",
+        "imageUrlInactive": "/images/school/school-inactive.png",
+        "imageUrlBig": "/images/school/school-green-big-active.png"
+    },
+    "avatarId": "8"
+  },
+  {
+    "_id": 4,
+    "forename": "Harald",
+    "surname": "Roth",
+    "studyGroups": {
+        "class": "10a",
+        "imageUrl": "/images/studyGroup/studyGroup_10a_active.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_10a_active-big.png",
+        "imageUrlBig": "/images/studyGroup/studyGroup_10a_inactive.png"
+    },
+    "formteacher": "Martina Kraus",
+    "school" : {
+        "name": "Speyer-Schifferstadt Gesamtchule",
+        "address": "Am Eselsdamm 11, 67346 Speyer",
+        "country": "Deutschland",
+        "email": "contact@tsv-speyer.de",
+        "telefon": "06232/ 23021990",
+        "imageUrl": "/images/school/school-yellow-active.png",
+        "imageUrlInactive": "/images/school/school-inactive.png",
+        "imageUrlBig": "/images/school/school-yellow-big-active.png"
+    },
+    "avatarId": "7"
+  },
+  {
+    "_id": 5,
+    "forename": "Tom",
+    "surname": "DeLonge",
+    "studyGroups": {
+        "class": "4/5",
+        "imageUrl": "/images/studyGroup/studyGroup_45_active.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_45_active-big.png",
+        "imageUrlBig": "/images/studyGroup/studyGroup_45_inactive.png"
+    },
+    "formteacher": "Olaf Stolz",
+    "school" : {
+        "name": "Merian-Realschule",
+        "address": "Heidelbergerstr. 121, 68526 Ladenburg",
+        "country": "Deutschland",
+        "email": "contact@merianrealschule.com",
+        "telefon": "06203/ 122122",
+        "imageUrl": "/images/school/school-purple-active.png",
+        "imageUrlInactive": "/images/school/school-inactive.png",
+        "imageUrlBig": "/images/school/school-purple-big-active.png"
+    },
+    "avatarId": "11"
+  }]
