@@ -16,6 +16,8 @@ var server = restify.createServer({
 });
 server.use(restify.bodyParser());
 server.use(restify.CORS());
+server.use(restify.fullResponse());
+restify.CORS.ALLOW_HEADERS.push('authorization');
 server.use(restify.queryParser());
 
 server.put(baseUrl + 'login', (req, res) => {
@@ -85,8 +87,9 @@ server.get(baseUrl + 'chapterillustrations/:chapterid', (req, res) => {
 
 server.get(baseUrl + 'studentcompetence', (req, res) => {
     var authHeader = req.headers.authorization;
-    var checked = req.params.checked ? true : false;
+    var checked = req.params.checked === 'true' ? true : false;
     var chapterId = parseInt(req.params.chapterId) || 1;
+
     var filteredCompetences = [];
 
     if (!authHeader) {
