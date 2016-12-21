@@ -1,0 +1,98 @@
+[
+  {
+    "_id" : 1,
+    "name" : "DAS BIN ICH!",
+    "strongcolor": "#79ab2e",
+    "weakcolor": "#a1c153"
+  },
+  {
+    "_id" : 2,
+    "name" : "ICH UND DIE ANDEREN",
+    "strongcolor": "#c6d54f",
+    "weakcolor": "#dbe283"
+  },
+  {
+    "_id" : 3,
+    "name" : "DIE WELT UM MICH HERUM",
+    "strongcolor": "#94c122",
+    "weakcolor": "#bad151"
+  },
+  {
+    "_id" : 4,
+    "name" : "ICH WERDE SELBSTSTÄNDIG",
+    "strongcolor": "#44b284",
+    "weakcolor": "#7cc3a3"
+  },
+  {
+    "_id" : 5,
+    "name" : "SICH BEWEGEN",
+    "strongcolor": "#ffdd00",
+    "weakcolor": "#ffea64"
+  },
+  {
+    "_id" : 6,
+    "name" : "LERNEN",
+    "strongcolor": "#ffed98",
+    "weakcolor": "#fff3d8"
+  },
+  {
+    "_id" : 7,
+    "name" : "ARBEITEN",
+    "strongcolor": "#fbb900",
+    "weakcolor": "#ffcf53"
+  },
+  {
+    "_id" : 8,
+    "name" : "GESTALTEN UND ERSCHAFFEN",
+    "strongcolor": "#ef7d25",
+    "weakcolor": "#f5a04c"
+  },
+  {
+    "_id" : 9,
+    "name" : "SPRECHEN",
+    "strongcolor": "#d60d66",
+    "weakcolor": "#e35184"
+  },
+  {
+    "_id" : 10,
+    "name" : "FREMDSPRACHE",
+    "strongcolor": "#ea518d",
+    "weakcolor": "#ee7ba9"
+  },
+  {
+    "_id" : 11,
+    "name" : "LESEN",
+    "strongcolor": "#f29db7",
+    "weakcolor": "#f7bed2"
+  },
+  {
+    "_id" : 12,
+    "name" : "SCHREIBEN",
+    "strongcolor": "#a62068",
+    "weakcolor": "#c9427e"
+  },
+  {
+    "_id" : 13,
+    "name" : "MESSEN",
+    "strongcolor": "#008fc8",
+    "weakcolor": "#4fa8da"
+  },
+  {
+    "_id" : 14,
+    "name" : "LÖSUNGEN FINDEN",
+    "strongcolor": "#62c2d0",
+    "weakcolor": "#94d3e5"
+  },
+  {
+    "_id" : 15,
+    "name" : "ZÄHLEN UND RECHNEN",
+    "strongcolor": "#004077",
+    "weakcolor": "#005daa"
+  },
+  {
+    "_id" : 16,
+    "name" : "FORM UND RAUM ENTDECKEN",
+    "strongcolor": "#3873b9",
+    "weakcolor": "#658bc8"
+  }
+]

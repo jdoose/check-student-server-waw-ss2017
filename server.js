@@ -5,6 +5,8 @@ var avatars = require('./data/avatar.json');
 var students = require('./data/students.json');
 var competences = require('./data/competences.json');
 var illustrations = require('./data/illustrations.json');
+var educationalPlans = require('./data/educationalPlans.json');
+var chapters = require('./data/chapters.json');
 
 const webtoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmVucyBEb29zZSJ9.uSVgj_vIPkX8PGQvAY_v2AfFAzntdT6uhOiuhveFrbw';
 
@@ -52,14 +54,14 @@ server.get(baseUrl + 'student', (req, res) => {
 });
 
 server.get(baseUrl + 'avatar/:avatarId', (req, res) => {
-    var aId = req.params.avatarId || 1;
+    var aId = parseInt(req.params.avatarId) || 1;
 
     var authHeader = req.headers.authorization;
     if (!authHeader) {
         res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
     } else {
         var avatar = _.find(avatars, (avatarObj) => {
-            if (avatar._id === aId)
+            if (avatarObj._id === aId)
                 return avatarObj;
         });
         res.json(200, avatar);
@@ -82,6 +84,31 @@ server.get(baseUrl + 'chapterillustrations/:chapterid', (req, res) => {
         res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
     } else {
         res.json(200, illustrations);
+    }
+});
+
+server.get(baseUrl + 'chapter/:chapterId', (req, res) => {
+    var authHeader = req.headers.authorization;
+    var cId = parseInt(req.params.chapterId) || 1;
+
+    if (!authHeader) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    } else {
+        var chapter = _.find(chapters, (chapterObj) => {
+            if (chapterObj._id === cId)
+                return chapterObj;
+        });
+        res.json(200, chapter);
+    }
+});
+
+server.get(baseUrl + 'chapter', (req, res) => {
+    var authHeader = req.headers.authorization;
+
+    if (!authHeader) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    } else {
+        res.json(200, chapters);
     }
 });
 
@@ -113,7 +140,6 @@ server.get(baseUrl + 'studentcompetence', (req, res) => {
     }
 });
 
-
 server.get(baseUrl + 'educationalPlan/:educationplanId', (req, res) => {
     var authHeader = req.headers.authorization;
     var educationplanId = parseInt(req.params.educationplanId) || 1;
@@ -126,6 +152,16 @@ server.get(baseUrl + 'educationalPlan/:educationplanId', (req, res) => {
             return competence.educationplanId === educationplanId;
         });
         res.json(200, filteredCompetences);
+    }
+});
+
+server.get(baseUrl + 'educationalPlan', (req, res) => {
+    var authHeader = req.headers.authorization;
+    if (!authHeader) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    } else {
+
+        res.json(200, educationalPlans);
     }
 });
 
