@@ -26,12 +26,21 @@ server.put(baseUrl + 'login', (req, res) => {
     res.json(200, {token: webtoken});
 });
 
-server.put(baseUrl + 'passwordRecovery', (req, res) => {
+server.put(baseUrl + 'requestPasswordRecovery', (req, res) => {
     var authHeader = req.headers.authorization;
     if (!authHeader) {
         res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
     } else {
-        res.json(200, {message: "Passwort erfolgreich geaendert", token: webtoken});
+        res.json(200, {message: "Passwort erfolgreich geändert", token: webtoken});
+    }
+});
+
+server.put(baseUrl + 'requestPasswordRecovery/reset', (req, res) => {
+    var authHeader = req.headers.authorization;
+    if (!authHeader) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    } else {
+        res.json(200, {message: "Passwort erfolgreich zurückgesetzt", token: webtoken});
     }
 });
 
@@ -40,7 +49,7 @@ server.del(baseUrl + 'student', (req, res) => {
     if (!authHeader) {
         res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
     } else {
-        res.json(200, {message: "Student wurde erfolgreich geloescht"});
+        res.json(200, {message: "Student wurde erfolgreich gelöscht"});
     }
 });
 
@@ -65,6 +74,15 @@ server.get(baseUrl + 'avatar/:avatarId', (req, res) => {
                 return avatarObj;
         });
         res.json(200, avatar);
+    }
+});
+
+server.put(baseUrl + 'avatar/:avatarId', (req, res) => {
+    var authHeader = req.headers.authorization;
+    if (!authHeader) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    } else {
+        res.json(200, {"message": "Avatar wurde erfolgreich geändert"});
     }
 });
 
