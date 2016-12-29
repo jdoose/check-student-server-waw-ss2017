@@ -1,0 +1,245 @@
+[
+  {
+    "id": 0,
+    "educationalPlanId": 1,
+    "competences": [
+      {
+        "competenceId": 51,
+        "note": "proident ipsum occaecat enim voluptate",
+        "order": 1
+      },
+      {
+        "competenceId": 236,
+        "note": "do deserunt esse in minim",
+        "order": 2
+      },
+      {
+        "competenceId": 85,
+        "note": "duis dolore reprehenderit cillum mollit",
+        "order": 3
+      },
+      {
+        "competenceId": 178,
+        "note": "aliquip officia cillum est culpa",
+        "order": 4
+      },
+      {
+        "competenceId": 206,
+        "note": "aliquip Lorem proident id eu",
+        "order": 5
+      },
+      {
+        "competenceId": 207,
+        "note": "non voluptate laboris ad minim",
+        "order": 6
+      },
+      {
+        "competenceId": 152,
+        "note": "velit irure nisi dolore culpa",
+        "order": 7
+      },
+      {
+        "competenceId": 125,
+        "note": "nisi Lorem dolore minim do",
+        "order": 8
+      },
+      {
+        "competenceId": 16,
+        "note": "et veniam consectetur nulla enim",
+        "order": 9
+      },
+      {
+        "competenceId": 155,
+        "note": "anim minim ea nostrud magna",
+        "order": 10
+      },
+      {
+        "competenceId": 145,
+        "note": "veniam voluptate elit sit eu",
+        "order": 11
+      },
+      {
+        "competenceId": 170,
+        "note": "eu sint minim sunt dolore",
+        "order": 12
+      },
+      {
+        "competenceId": 208,
+        "note": "dolore in dolor velit veniam",
+        "order": 13
+      },
+      {
+        "competenceId": 9,
+        "note": "dolore consectetur est et laborum",
+        "order": 14
+      },
+      {
+        "competenceId": 218,
+        "note": "culpa aliqua proident et dolor",
+        "order": 15
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "educationalPlanId": 2,
+    "competences": [
+      {
+        "competenceId": 131,
+        "note": "ullamco amet ex consequat reprehenderit",
+        "order": 1
+      },
+      {
+        "competenceId": 144,
+        "note": "aliquip exercitation laboris minim qui",
+        "order": 2
+      },
+      {
+        "competenceId": 126,
+        "note": "sunt consequat minim et aliqua",
+        "order": 3
+      },
+      {
+        "competenceId": 230,
+        "note": "ad esse in duis velit",
+        "order": 4
+      },
+      {
+        "competenceId": 12,
+        "note": "veniam cillum exercitation amet aute",
+        "order": 5
+      },
+      {
+        "competenceId": 187,
+        "note": "elit aute commodo velit sit",
+        "order": 6
+      },
+      {
+        "competenceId": 97,
+        "note": "id id culpa incididunt eu",
+        "order": 7
+      },
+      {
+        "competenceId": 209,
+        "note": "commodo incididunt qui officia commodo",
+        "order": 8
+      },
+      {
+        "competenceId": 243,
+        "note": "in tempor cupidatat ut do",
+        "order": 9
+      },
+      {
+        "competenceId": 104,
+        "note": "cupidatat cillum eu proident amet",
+        "order": 10
+      },
+      {
+        "competenceId": 81,
+        "note": "ipsum esse quis aliqua occaecat",
+        "order": 11
+      },
+      {
+        "competenceId": 224,
+        "note": "pariatur ea nulla labore est",
+        "order": 12
+      },
+      {
+        "competenceId": 0,
+        "note": "fugiat et eiusmod ad ipsum",
+        "order": 13
+      },
+      {
+        "competenceId": 132,
+        "note": "culpa pariatur in mollit adipisicing",
+        "order": 14
+      },
+      {
+        "competenceId": 240,
+        "note": "ullamco fugiat quis cupidatat ad",
+        "order": 15
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "educationalPlanId": 3,
+    "competences": [
+      {
+        "competenceId": 84,
+        "note": "exercitation enim esse amet irure",
+        "order": 1
+      },
+      {
+        "competenceId": 243,
+        "note": "labore anim dolore id reprehenderit",
+        "order": 2
+      },
+      {
+        "competenceId": 158,
+        "note": "cillum consectetur labore irure deserunt",
+        "order": 3
+      },
+      {
+        "competenceId": 208,
+        "note": "aliqua voluptate est esse aliqua",
+        "order": 4
+      },
+      {
+        "competenceId": 213,
+        "note": "duis non eu incididunt in",
+        "order": 5
+      },
+      {
+        "competenceId": 181,
+        "note": "sunt proident adipisicing enim pariatur",
+        "order": 6
+      },
+      {
+        "competenceId": 103,
+        "note": "esse voluptate anim consectetur magna",
+        "order": 7
+      },
+      {
+        "competenceId": 29,
+        "note": "nostrud esse consectetur cupidatat adipisicing",
+        "order": 8
+      },
+      {
+        "competenceId": 157,
+        "note": "fugiat amet officia ullamco esse",
+        "order": 9
+      },
+      {
+        "competenceId": 193,
+        "note": "deserunt ullamco minim deserunt culpa",
+        "order": 10
+      },
+      {
+        "competenceId": 181,
+        "note": "cillum sunt nostrud deserunt occaecat",
+        "order": 11
+      },
+      {
+        "competenceId": 181,
+        "note": "veniam reprehenderit amet mollit consectetur",
+        "order": 12
+      },
+      {
+        "competenceId": 53,
+        "note": "laborum quis excepteur ullamco id",
+        "order": 13
+      },
+      {
+        "competenceId": 100,
+        "note": "aute aliqua labore aliqua exercitation",
+        "order": 14
+      },
+      {
+        "competenceId": 138,
+        "note": "nulla tempor irure deserunt adipisicing",
+        "order": 15
+      }
+    ]
+  }
+]

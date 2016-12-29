@@ -7,6 +7,7 @@ var competences = require('./data/competences.json');
 var illustrations = require('./data/illustrations.json');
 var educationalPlans = require('./data/educationalPlans.json');
 var chapters = require('./data/chapters.json');
+var educationalPlanHasStudent = require('./data/edicationalPlanHasStudent.json');
 
 const webtoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmVucyBEb29zZSJ9.uSVgj_vIPkX8PGQvAY_v2AfFAzntdT6uhOiuhveFrbw';
 
@@ -133,17 +134,20 @@ server.get(baseUrl + 'chapter', (req, res) => {
 server.get(baseUrl + 'studentcompetence', (req, res) => {
     var authHeader = req.headers.authorization;
     var checked = req.params.checked === 'true' ? true : false;
-    var chapterId = parseInt(req.params.chapterId) || 1;
+    var chapterId = parseInt(req.params.chapterId) || 0;
 
     var filteredCompetences = [];
 
     if (!authHeader) {
         res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
     } else {
-        filteredCompetences = competences.filter((competence) => {
-            return competence.chapterId === chapterId;
-        });
-
+        if (chapterId !== 0) {
+          filteredCompetences = competences.filter((competence) => {
+              return competence.chapterId === chapterId;
+          });
+        } else {
+          filteredCompetences = competences;
+        }
         if (checked) {
             var filteredCompetencesChecked = filteredCompetences.filter((competence) => {
                 return competence.checked === true;
@@ -153,8 +157,6 @@ server.get(baseUrl + 'studentcompetence', (req, res) => {
         } else {
             res.json(200, filteredCompetences);
         }
-
-
     }
 });
 
@@ -166,8 +168,8 @@ server.get(baseUrl + 'educationalPlan/:educationplanId', (req, res) => {
     if (!authHeader) {
         res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
     } else {
-        filteredCompetences = competences.filter((competence) => {
-            return competence.educationplanId === educationplanId;
+        filteredCompetences = educationalPlanHasStudent.filter((educationalPlan) => {
+            return educationalPlan.educationalPlanId === educationplanId;
         });
         res.json(200, filteredCompetences);
     }
