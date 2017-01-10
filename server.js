@@ -8,6 +8,7 @@ var illustrations = require('./data/illustrations.json');
 var educationalPlans = require('./data/educationalPlans.json');
 var chapters = require('./data/chapters.json');
 var educationalPlanHasStudent = require('./data/edicationalPlanHasStudent.json');
+var passwords = require('./data/password.json');
 
 const webtoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmVucyBEb29zZSJ9.uSVgj_vIPkX8PGQvAY_v2AfFAzntdT6uhOiuhveFrbw';
 
@@ -24,51 +25,73 @@ restify.CORS.ALLOW_HEADERS.push('authorization');
 server.use(restify.queryParser());
 
 server.put(baseUrl + 'login', (req, res) => {
-    res.json(200, {token: webtoken});
+    if (req.body && req.body.username) {
+        var username = req.body.username;
+        var user = _.find(passwords, (userObj) => {
+            if (userObj.username === username)
+                return userObj;
+        });
+        res.json(200, {token: user.token});
+    } else {
+        res.json(401, {message: "Unauthorized"});
+    }
 });
 
+function checkToken (authHeader) {
+    return _.find(passwords, (userObj) => {
+        if (userObj.token === authHeader)
+            return userObj;
+    });
+}
+
 server.put(baseUrl + 'requestPasswordRecovery', (req, res) => {
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
-        res.json(200, {message: "Passwort erfolgreich geändert", token: webtoken});
+        res.json(200, {message: "Passwort erfolgreich geändert", token: req.headers.authorization});
     }
 });
 
 server.put(baseUrl + 'requestPasswordRecovery/reset', (req, res) => {
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         res.json(200, {message: "Passwort erfolgreich zurückgesetzt", token: webtoken});
     }
 });
 
 server.del(baseUrl + 'student', (req, res) => {
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         res.json(200, {message: "Student wurde erfolgreich gelöscht"});
     }
 });
 
 server.get(baseUrl + 'student', (req, res) => {
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
-        res.json(200, students[0]);
+        var studentId = isCorrectToken.studentId;
+        var student = _.find(students, (studentObj) => {
+            if (studentObj._id === studentId)
+                return studentObj;
+        });
+
+        res.json(200, student);
     }
 });
 
 server.get(baseUrl + 'avatar/:avatarId', (req, res) => {
     var aId = parseInt(req.params.avatarId) || 1;
 
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         var avatar = _.find(avatars, (avatarObj) => {
             if (avatarObj._id === aId)
@@ -79,39 +102,37 @@ server.get(baseUrl + 'avatar/:avatarId', (req, res) => {
 });
 
 server.put(baseUrl + 'avatar/:avatarId', (req, res) => {
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         res.json(200, {"message": "Avatar wurde erfolgreich geändert"});
     }
 });
 
 server.get(baseUrl + 'avatar', (req, res) => {
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         res.json(200, avatars);
     }
 });
 
 server.get(baseUrl + 'chapterillustrations/:chapterid', (req, res) => {
-    var authHeader = req.headers.authorization;
-
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         res.json(200, illustrations);
     }
 });
 
 server.get(baseUrl + 'chapter/:chapterId', (req, res) => {
-    var authHeader = req.headers.authorization;
     var cId = parseInt(req.params.chapterId) || 1;
-
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         var chapter = _.find(chapters, (chapterObj) => {
             if (chapterObj._id === cId)
@@ -122,24 +143,23 @@ server.get(baseUrl + 'chapter/:chapterId', (req, res) => {
 });
 
 server.get(baseUrl + 'chapter', (req, res) => {
-    var authHeader = req.headers.authorization;
-
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         res.json(200, chapters);
     }
 });
 
 server.get(baseUrl + 'studentcompetence', (req, res) => {
-    var authHeader = req.headers.authorization;
     var checked = req.params.checked === 'true' ? true : false;
     var chapterId = parseInt(req.params.chapterId) || 0;
 
     var filteredCompetences = [];
 
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         if (chapterId !== 0) {
           filteredCompetences = competences.filter((competence) => {
@@ -161,12 +181,12 @@ server.get(baseUrl + 'studentcompetence', (req, res) => {
 });
 
 server.get(baseUrl + 'educationalPlan/:educationplanId', (req, res) => {
-    var authHeader = req.headers.authorization;
     var educationplanId = parseInt(req.params.educationplanId) || 1;
     var filteredCompetences = [];
 
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
         filteredCompetences = educationalPlanHasStudent.filter((educationalPlan) => {
             return educationalPlan.educationalPlanId === educationplanId;
@@ -176,9 +196,9 @@ server.get(baseUrl + 'educationalPlan/:educationplanId', (req, res) => {
 });
 
 server.get(baseUrl + 'educationalPlan', (req, res) => {
-    var authHeader = req.headers.authorization;
-    if (!authHeader) {
-        res.json(401, {message: 'Keine Berechtigung - fehlender Token'});
+    var isCorrectToken = checkToken(req.headers.authorization);
+    if (!isCorrectToken) {
+        res.json(401, {message: 'Keine Berechtigung - fehlender/ falscher Token'});
     } else {
 
         res.json(200, educationalPlans);
