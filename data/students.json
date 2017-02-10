@@ -2,11 +2,12 @@
   "_id": 1,
   "forename": "Uta",
   "surname": "Teeth",
+  "birth": "9. September 1987",
   "studyGroups": {
       "class": "2a",
       "imageUrl": "/images/studyGroup/studyGroup_2a_active.png",
-      "imageUrlInactive": "/images/studyGroup/studyGroup_2a_active-big.png",
-      "imageUrlBig": "/images/studyGroup/studyGroup_2a_inactive.png"
+      "imageUrlBig": "/images/studyGroup/studyGroup_2a_active-big.png",
+      "imageUrlInactive": "/images/studyGroup/studyGroup_2a_inactive.png"
   },
   "formteacher": "Markus Karg",
   "school" : {
@@ -25,11 +26,12 @@
     "_id": 2,
     "forename": "Theo",
     "surname": "Kraus",
+    "birth": "21. November 2015",
     "studyGroups": {
         "class": "3",
         "imageUrl": "/images/studyGroup/studyGroup_3_active.png",
-        "imageUrlInactive": "/images/studyGroup/studyGroup_3_active-big.png",
-        "imageUrlBig": "/images/studyGroup/studyGroup_3_inactive.png"
+        "imageUrlBig": "/images/studyGroup/studyGroup_3_active-big.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_3_inactive.png"
     },
     "formteacher": "Christian Kraus",
     "school" : {
@@ -48,11 +50,12 @@
     "_id": 3,
     "forename": "Jan",
     "surname": "Arzt",
+    "birth": "27. Oktober 1963",
     "studyGroups": {
         "class": "5b",
         "imageUrl": "/images/studyGroup/studyGroup_5b_active.png",
-        "imageUrlInactive": "/images/studyGroup/studyGroup_5b_active-big.png",
-        "imageUrlBig": "/images/studyGroup/studyGroup_5b_inactive.png"
+        "imageUrlBig": "/images/studyGroup/studyGroup_5b_active-big.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_5b_inactive.png"
     },
     "formteacher": "Dirk Felsenheimer",
     "school" : {
@@ -71,11 +74,12 @@
     "_id": 4,
     "forename": "Harald",
     "surname": "Roth",
+    "birth": "9. Junu 1975",
     "studyGroups": {
         "class": "10a",
         "imageUrl": "/images/studyGroup/studyGroup_10a_active.png",
-        "imageUrlInactive": "/images/studyGroup/studyGroup_10a_active-big.png",
-        "imageUrlBig": "/images/studyGroup/studyGroup_10a_inactive.png"
+        "imageUrlBig": "/images/studyGroup/studyGroup_10a_active-big.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_10a_inactive.png"
     },
     "formteacher": "Martina Kraus",
     "school" : {
@@ -94,11 +98,12 @@
     "_id": 5,
     "forename": "Tom",
     "surname": "DeLonge",
+    "birth": "21. September 1987",
     "studyGroups": {
         "class": "4/5",
         "imageUrl": "/images/studyGroup/studyGroup_45_active.png",
-        "imageUrlInactive": "/images/studyGroup/studyGroup_45_active-big.png",
-        "imageUrlBig": "/images/studyGroup/studyGroup_45_inactive.png"
+        "imageUrlBig": "/images/studyGroup/studyGroup_45_active-big.png",
+        "imageUrlInactive": "/images/studyGroup/studyGroup_45_inactive.png"
     },
     "formteacher": "Olaf Stolz",
     "school" : {
