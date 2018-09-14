@@ -13,7 +13,7 @@ var passwords = require('./data/password.json');
 const webtoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmVucyBEb29zZSJ9.uSVgj_vIPkX8PGQvAY_v2AfFAzntdT6uhOiuhveFrbw';
 
 var restify = require('restify');
-const baseUrl = '/api/V1/';
+const baseUrl = '/student-api/V1/';
 
 var server = restify.createServer({
     name: 'WAWWS16'
